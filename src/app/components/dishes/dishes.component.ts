@@ -2,10 +2,10 @@ import { AsyncPipe, JsonPipe } from '@angular/common';
 import { Component, inject, Input, input } from '@angular/core';
 import { IonContent, IonList, IonItem } from '@ionic/angular/standalone';
 import { catchError, ignoreElements, Observable, of } from 'rxjs';
-import { DishesCategory } from 'src/app/definitions/model/categories';
-import { CategoriesService } from 'src/app/service/categories.service';
 import { DisheComponent } from '../dishe/dishe.component';
 import { Router } from '@angular/router';
+import { CategoriesService } from '../../service/categories.service';
+import { DishesCategory } from '../../definitions/model/categories';
 
 @Component({
   selector: 'app-dishes',

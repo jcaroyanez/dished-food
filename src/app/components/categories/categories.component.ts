@@ -2,11 +2,11 @@ import { AsyncPipe, JsonPipe } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { IonContent } from '@ionic/angular/standalone';
 import { catchError, ignoreElements, of } from 'rxjs';
-import { CategoriesService } from 'src/app/service/categories.service';
 import { CategoryComponent } from '../category/category.component';
 import { IonSegment } from '@ionic/angular/standalone';
-import { StoreService } from 'src/app/store/store.service';
-import { Category } from 'src/app/definitions/model/categories';
+import { Category } from '../../definitions/model/categories';
+import { StoreService } from '../../store/store.service';
+import { CategoriesService } from '../../service/categories.service';
 
 @Component({
   selector: 'app-categories',

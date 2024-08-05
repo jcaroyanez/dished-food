@@ -1,5 +1,5 @@
-import { Component, input, OnInit } from '@angular/core';
-import { DishesCategory } from 'src/app/definitions/model/categories';
+import { Component, input} from '@angular/core';
+import { DishesCategory } from '../../definitions/model/categories';
 
 @Component({
   selector: 'app-dishe',

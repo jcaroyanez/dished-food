@@ -1,7 +1,7 @@
 import { NgClass, NgOptimizedImage } from '@angular/common';
 import { Component, input, output } from '@angular/core';
 import { IonCard, IonGrid, IonCol, IonRow } from '@ionic/angular/standalone';
-import { Category } from 'src/app/definitions/model/categories';
+import { Category } from '../../definitions/model/categories';
 
 @Component({
   selector: 'app-category',

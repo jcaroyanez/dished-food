@@ -2,13 +2,13 @@ import { Component, inject } from '@angular/core';
 import { AsyncPipe, CommonModule, JsonPipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonIcon, IonFab, IonFabButton, IonButton } from '@ionic/angular/standalone';
-import { DishesService } from 'src/app/service/dishes.service';
 import { ActivatedRoute } from '@angular/router';
 import { catchError, ignoreElements, of } from 'rxjs';
-import { MealComponent } from 'src/app/components/meal/meal.component';
 import { arrowBackOutline } from 'ionicons/icons';
 import { addIcons } from 'ionicons';
 import { NavController } from '@ionic/angular';
+import { MealComponent } from '../../components/meal/meal.component';
+import { DishesService } from '../../service/dishes.service';
 
 @Component({
 	selector: 'app-detail',

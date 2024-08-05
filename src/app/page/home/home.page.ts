@@ -1,17 +1,17 @@
 import { JsonPipe } from '@angular/common';
 import { Component, inject, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
 import { IonContent, IonHeader, IonTabBar, IonTitle, IonToolbar, IonButton } from '@ionic/angular/standalone';
 import { Subject, takeUntil } from 'rxjs';
-import { CategoriesComponent } from 'src/app/components/categories/categories.component';
-import { DishesComponent } from 'src/app/components/dishes/dishes.component';
-import { InputSearchComponent } from 'src/app/components/input-search/input-search.component';
-import { SearchBarComponent } from 'src/app/components/search-bar/search-bar.component';
-import { Category } from 'src/app/definitions/model/categories';
-import { StoreCategory } from 'src/app/definitions/model/store';
-import { DishesService } from 'src/app/service/dishes.service';
-import { StoreService } from 'src/app/store/store.service';
+import { StoreService } from '../../store/store.service';
+import { DishesService } from '../../service/dishes.service';
+import { StoreCategory } from '../../definitions/model/store';
+import { Category } from '../../definitions/model/categories';
+import { SearchBarComponent } from '../../components/search-bar/search-bar.component';
+import { InputSearchComponent } from '../../components/input-search/input-search.component';
+import { DishesComponent } from '../../components/dishes/dishes.component';
+import { CategoriesComponent } from '../../components/categories/categories.component';
 
 @Component({
   selector: 'app-home',
