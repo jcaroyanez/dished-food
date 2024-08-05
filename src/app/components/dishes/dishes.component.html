@@ -1,0 +1,13 @@
+@if ({ dishes: dishes$ | async, error: dishesError$ | async }; as data) { 
+	@if(!data.error) {
+		<ion-list>
+			@for (dishe of data.dishes; track dishe.idMeal) {
+				<ion-item class="ion-no-padding" lines="full" (click)="goToDetail(dishe.idMeal)">
+					<app-dishe [dishe]="dishe" />
+				</ion-item>
+			} 
+		</ion-list>
+	} @else {
+		<p>Ha ocurrido un error</p>
+	} 
+}

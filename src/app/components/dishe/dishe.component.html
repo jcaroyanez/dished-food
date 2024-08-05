@@ -1,0 +1,8 @@
+@let disheTemplate = dishe();
+
+@defer (on viewport) {
+	<img  [src]="disheTemplate.strMealThumb" class="img" />
+	<p class="title">{{disheTemplate.strMeal}}</p>
+} @placeholder {
+	<p>Loading...</p>
+}

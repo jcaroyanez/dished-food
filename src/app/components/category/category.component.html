@@ -1,0 +1,13 @@
+@let categoryTemplate = category();
+
+<div class="content" (click)="sendCategory.emit(categoryTemplate)">
+  <ion-card [ngClass]="{card: true, active: categoryStore() === categoryTemplate.idCategory}">
+    <img
+      alt="Silhouette of mountains"
+      [src]="categoryTemplate.strCategoryThumb"
+      width="90"
+      height="90"
+    />
+  </ion-card>
+  <p class="title">{{ categoryTemplate.strCategory }}</p>
+</div>

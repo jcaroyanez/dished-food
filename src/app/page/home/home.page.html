@@ -1,0 +1,15 @@
+<app-search-bar>
+	<app-input-search (onChange)="onChange($event)"/>
+</app-search-bar>
+
+<ion-content [fullscreen]="true">
+	@if (storeValue.isCategory) {
+		<app-categories />
+	} @else {
+		<ion-button fill="clear" (click)="findByCategory()">Find by category</ion-button>
+	}
+
+	@if(storeValue.categorySelected.idCategory) {
+		<app-dishes [nameCategory]="storeValue.categorySelected.strCategory" />
+	}
+</ion-content>

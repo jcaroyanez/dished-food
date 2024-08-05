@@ -1,0 +1,16 @@
+@if ({ categories: categories$ | async, error: categoriError$ | async }; as data) {
+	@if (!data.error) {
+		<ion-segment [scrollable]="true">
+			<div class="items">
+				@for (category of data.categories; track category.idCategory) {
+					<app-category 
+					[category]="category"
+					[categoryStore]="(categorySelected$ | async)!.categorySelected.idCategory"
+					(sendCategory)="getCategory($event)" />
+				}
+			</div>	
+		</ion-segment>
+	}@else {
+		<p>error</p>
+	}
+}

@@ -1,0 +1,14 @@
+ion-item {
+	--inner-padding-end: 10px;
+	--inner-padding-start: 10px;
+	--padding-bottom: 5px;
+	--padding-top: 20px;
+
+	&:last-child {   
+		border-bottom: 0px;
+	}
+}
+
+app-dishe {
+ width: 100%;	
+}

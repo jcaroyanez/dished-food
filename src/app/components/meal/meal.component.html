@@ -1,0 +1,35 @@
+@let mealTemplate = meal();
+
+@if (mealTemplate) {
+	<div class="container">
+		<img class="img" [src]="mealTemplate.strMealThumb" />
+		<div class="content-card">
+			<ion-card class="card">
+				<ion-card-title class="title">{{ mealTemplate.strMeal }}</ion-card-title>
+				<ion-card-subtitle class="subtitle">
+					Category {{ mealTemplate.strCategory }} - {{ mealTemplate.strArea }}
+				</ion-card-subtitle>
+
+				<ion-accordion-group [multiple]="true">
+					<ion-accordion value="first">
+						<ion-item slot="header" color="light">
+							<ion-label>Recipe</ion-label>
+						</ion-item>
+						<div class="ion-padding" slot="content">
+							@for (item of mealTemplate.recipe; track $index) {
+								<p>{{ item.ingredient }} - {{item.measure}}</p>
+							}
+						</div>
+					</ion-accordion>
+
+					<ion-accordion value="second">
+						<ion-item slot="header" color="light">
+							<ion-label>Intructions</ion-label>
+						</ion-item>
+						<div class="ion-padding" slot="content" [innerHTML]="mealTemplate.strInstructions"></div>
+					</ion-accordion>
+				</ion-accordion-group>
+			</ion-card>
+		</div>
+	</div>
+}
